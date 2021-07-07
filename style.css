@@ -1,0 +1,55 @@
+body{
+  text-align: center;
+}
+div{
+  display: inline-block;
+}
+button{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+#table{
+  display: block;
+  margin-top: 20px;
+}
+th, td{
+  border: 1px solid black;
+  padding: 5px;
+}
+table{
+  text-align: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
