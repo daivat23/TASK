@@ -15,10 +15,11 @@ var timesClicked = 0;
 
 document.getElementById("btn").addEventListener("click", () => {
     timesClicked++;
-
+    document.getElementById("cal").innerHTML = " ";
     if (timesClicked>1) {
         //run second function
         show();
+        //document.getElementById("cal").innerHTML = " ";
     } else {
         //run first function
         see();
@@ -56,7 +57,7 @@ var sal = document.createElement("select");
 //sal.onchange = function(){show()};
 sal.id = "year";
 sal.name = "year";
-for(var y = 2000; y <= 2025; y++) {
+for( y = 2000; y <= 2025; y++) {
   var optn = document.createElement("option");
   optn.text = y;
   optn.value = y;
@@ -66,6 +67,7 @@ for(var y = 2000; y <= 2025; y++) {
 }
 //document.getElementById("year").onchange = function(){show()};
 //button.addEventListener("click", fun);
+let d =new Date();
 function show(){
     let table1 = document.createElement("table");
     table1.setAttribute("id", "teb");
@@ -86,6 +88,7 @@ function show(){
     let d = new Date(year, mon); 
     for (let i = 0; i < getDay(d); i++) {
         var x = document.createElement("td");
+        x.setAttribute('id', 'tdata');
         headerRow.appendChild(x);
         table1.appendChild(headerRow);
       }
@@ -118,4 +121,3 @@ function show(){
     document.getElementById("cal").appendChild(table1);
 }
 document.getElementById("demo").innerHTML = "Javascript Calendar";
-
